@@ -1,0 +1,68 @@
+[
+    {
+        "title": "Tìm hiểu về VueJS cơ bản (P1)",
+        "description": "Gần đây do yêu cầu công việc nên mình có cơ hội được thử sức với VueJS. Theo mình thấy thì nếu bạn đã từng làm việc với ReactJS rồi thì khi chuyển qua code VueJS thì mọi thứ khá là giống nhau ở nhiều điểm nên bạn hoàn toàn có thể học và code được cả hai mà không quá vất vả giống như việc học lại một cái gì đó mới hoàn toàn. ",
+        "image": "https://www.kagoya.jp/howto/wp-content/uploads/202205d_1.jpg",
+        "author": {
+            "name": "Nguyễn Hưởng",
+            "profile_img": "https://as1.ftcdn.net/v2/jpg/05/52/03/68/1000_F_552036876_1tlOoZo90nkcBnotqdoVgB8FBrSHwQBN.jpg"
+        },
+        "categories": ["Frontend", "Lập trình"],
+        "publish_date": "2024-10-21 12:10:10"
+    },
+    {
+        "title": "Tạo một dự án Nuxtjs",
+        "description": "Nuxtjs là một framework dựa trên Vuejs giúp cho việc xây dựng và phát triển các ứng dụng web một cách nhanh chóng. Vì vậy các bạn cần học Vue trước khi tìm hiểu Nuxjs nhé.",
+        "image": "https://bb.agency/wp-content/uploads/2024/01/nuxtjs_img2.webp",
+        "author": {
+            "name": "Xuân Nhi",
+            "profile_img": "https://as1.ftcdn.net/v2/jpg/05/52/03/68/1000_F_552036876_1tlOoZo90nkcBnotqdoVgB8FBrSHwQBN.jpg"
+        },
+        "categories": ["Frontend", "Web"],
+        "publish_date": "2024-10-20 08:30:30"
+    },
+    {
+        "title": "Phân biệt cấu trúc ために và ように",
+        "description": "ために (tame ni) và ように (you ni) đều có nghĩa là “làm điều gì đó hướng tới một mục đích.” Tuy nhiên, bạn đã biết cách phân biệt chúng chưa?",
+        "image": "https://i0.wp.com/tanosuke.com/wp-content/uploads/2022/02/tameni-youni2.png?fit=640%2C360&ssl=1",
+        "author": {
+            "name": "Nguyễn Huyền",
+            "profile_img": "https://as1.ftcdn.net/v2/jpg/05/52/03/68/1000_F_552036876_1tlOoZo90nkcBnotqdoVgB8FBrSHwQBN.jpg"
+        },
+        "categories": ["Japanese", "Grama"],
+        "publish_date": "2024-10-21 12:10:10"
+    },
+    {
+        "title": "Tổng hợp ngữ pháp N3",
+        "description": "Toàn bộ ngữ pháp N3 được biên soạn dựa trên bộ sách “Nihongo Soumatome N3” và “Nihongo Speed Master – Bunpo N3” . Danh sách này không bao gồm các cấu trúc ngữ pháp đã học ở trình độ N4 và N5.",
+        "image": "https://kotobaken.jp/wp-content/uploads/2022/11/qa168_sns_01.png",
+        "author": {
+            "name": "Xuân Nhi",
+            "profile_img": "https://as1.ftcdn.net/v2/jpg/05/52/03/68/1000_F_552036876_1tlOoZo90nkcBnotqdoVgB8FBrSHwQBN.jpg"
+        },
+        "categories": ["Japanese"],
+        "publish_date": "2024-10-21 12:10:10"
+    },
+    {
+        "title": "Lộ trình học MySQL từ A đến Z",
+        "description": "MySQL là một hệ thống quản trị cơ sở dữ liệu mã nguồn mở (RDBMS) hoạt động theo mô hình client-server ; phổ biến nhất thế giới và được các lập trình viên, nhà phát triển hệ thống, ứng dụng rất ưa chuộng.",
+        "image": "https://cdn.intuji.com/2023/10/MySQL.png",
+        "author": {
+            "name": "Nguyen Huong",
+            "profile_img": "https://as1.ftcdn.net/v2/jpg/05/52/03/68/1000_F_552036876_1tlOoZo90nkcBnotqdoVgB8FBrSHwQBN.jpg"
+        },
+        "categories": ["Database"],
+        "publish_date": "2024-10-21 12:10:10"
+    },
+    {
+        "title": "XAMPP là gì? Cách cài đặt và sử dụng XAMPP trên Windows và Linux",
+        "description": "XAMPP hay WAMP luôn là 2 sự lựa chọn hàng đầu của giới lập trình Website khi họ cần tới môi trường để chạy giả lập Website trên Browser. Ở bài viết này Mắt Bão sẽ hướng dẫn bạn XAMPP, các thiết lập quan trọng nhất trên XAMPP là gì? Cùng tìm hiểu nhé!",
+        "image": "https://primal-ap.jp/cms/wp-content/uploads/2023/12/xampp.jpg",
+        "author": {
+            "name": "Mario Sanchez",
+            "profile_img": "https://as1.ftcdn.net/v2/jpg/05/52/03/68/1000_F_552036876_1tlOoZo90nkcBnotqdoVgB8FBrSHwQBN.jpg"
+        },
+        "categories": ["Design", "Lifestyle"],
+        "publish_date": "2024-10-21 12:10:10"
+    }
+]
