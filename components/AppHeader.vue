@@ -62,9 +62,26 @@
 
 <script lang="ts" setup>
 	import { ref } from 'vue';
-
-	// Toggle state for mobile menu
+	
 	const isMenuOpen = ref(false);
+	const nav_items = [
+		{
+			title: 'Home',
+			child: [],
+		},
+		{
+			title: 'Tiếng Nhật',
+			child: [],
+		},
+		{
+			title: 'Lập Trình',
+			child: [],
+		},
+		{
+			title: 'Liên Hệ',
+			child: [],
+		},
+	];
 
 	// Function to toggle menu
 	const toggleMenu = () => {
