@@ -1,34 +1,62 @@
 <template>
-	<header class="bg-gray-800 text-white">
-		<div class="container mx-auto flex justify-between items-center p-4">
-			<!-- Logo -->
-			<div class="text-lg font-bold">
-			<a href="#" class="text-white">My Logo</a>
+	<header class="bg-white shadow-md fixed w-full top-0 left-0 z-10">
+		<nav class="">
+			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+				<div class="flex justify-between h-16">
+				<!-- Logo and Menu -->
+				<div class="flex items-center">
+					<a href="#" class="text-2xl font-bold text-gray-800">8BLOG</a>
+				</div>
+
+				<!-- Desktop Menu -->
+				<div class="hidden md:flex space-x-8 items-center">
+					<div class="relative group">
+					<a href="#" class="text-gray-700 hover:text-purple-600">Home</a>
+					</div>
+					<div class="relative group">
+					<a href="#" class="text-gray-700 hover:text-purple-600">About</a>
+					</div>
+					<div class="relative group">
+					<a href="#" class="text-gray-700 hover:text-purple-600">Services</a>
+					<!-- Submenu -->
+					<div class="absolute left-0 top-full mt-1 hidden group-hover:block bg-white shadow-lg rounded-md">
+						<a href="#" class="block px-4 py-2 text-gray-700 hover:bg-purple-100">Service 1</a>
+						<a href="#" class="block px-4 py-2 text-gray-700 hover:bg-purple-100">Service 2</a>
+					</div>
+					</div>
+				</div>
+
+				<!-- User Icon or Login Button -->
+				<div class="flex items-center space-x-4">
+					<div class="hidden md:block">
+					<!-- Assuming user is logged in -->
+					<a href="#" class="text-gray-700 hover:text-purple-600">
+						
+						<font-awesome-icon :icon="['fas', 'user']" class="text-2xl" />
+					</a>
+					</div>
+
+					<!-- Mobile Menu Button -->
+					<div class="md:hidden">
+					<button id="mobile-menu-toggle" class="text-gray-700 hover:text-purple-600 focus:outline-none" @click="toggleMenu()">
+						<font-awesome-icon :icon="['fas', 'bars']" class="text-2xl" />
+					</button>
+					</div>
+				</div>
+				</div>
 			</div>
 
-			<!-- Menu button for mobile -->
-			<button id="menu-btn" class="md:hidden block focus:outline-none" @click="toggleMenu()">
-			<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-				<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-			</svg>
-			</button>
-
-			<!-- Menu items -->
-			<nav id="menu" class="hidden md:flex space-x-4">
-			<a href="#" class="hover:text-gray-400">Home</a>
-			<a href="#" class="hover:text-gray-400">About</a>
-			<a href="#" class="hover:text-gray-400">Services</a>
-			<a href="#" class="hover:text-gray-400">Contact</a>
-			</nav>
-		</div>
-
-		<!-- Mobile Menu (hidden by default) -->
-		<div v-if="isMenuOpen" id="mobile-menu" class="md:hidden bg-gray-800 text-white p-4">
-			<a href="#" class="block py-2">Home</a>
-			<a href="#" class="block py-2">About</a>
-			<a href="#" class="block py-2">Services</a>
-			<a href="#" class="block py-2">Contact</a>
-		</div>
+			<!-- Mobile Menu -->
+			<div id="mobile-menu" class="md:hidden bg-white shadow-lg" :class="{ hidden: !isMenuOpen }">
+				<a href="#" class="block px-4 py-2 text-gray-700 hover:bg-purple-100">Home</a>
+				<a href="#" class="block px-4 py-2 text-gray-700 hover:bg-purple-100">About</a>
+				<a href="#" class="block px-4 py-2 text-gray-700 hover:bg-purple-100">Services</a>
+				<div class="pl-4">
+				<a href="#" class="block px-4 py-2 text-gray-700 hover:bg-purple-100">Service 1</a>
+				<a href="#" class="block px-4 py-2 text-gray-700 hover:bg-purple-100">Service 2</a>
+				</div>
+			</div>
+		</nav>
 	</header>
 </template>
 
@@ -36,11 +64,11 @@
 	import { ref } from 'vue';
 
 	// Toggle state for mobile menu
-	const isMenuOpen = ref(false)
+	const isMenuOpen = ref(false);
 
 	// Function to toggle menu
 	const toggleMenu = () => {
-		isMenuOpen.value = !isMenuOpen.value
+		isMenuOpen.value = !isMenuOpen.value;
 	}
 </script>
 

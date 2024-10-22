@@ -10,7 +10,7 @@
 
         <!-- List Item -->
         <div class="container mx-auto flex justify-between items-center p-4">
-            <div class="mt-10 grid gap-10 md:grid-cols-2 lg:gap-10 xl:grid-cols-3 ">
+            <div class="grid gap-10 md:grid-cols-2 lg:gap-10 xl:grid-cols-3 ">
                 <!-- Item -->
                 <ArticleItem v-for="(article, key) in articles" :key="key" :article="article"/>
             </div>
