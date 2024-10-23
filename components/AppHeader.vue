@@ -10,37 +10,29 @@
 
 				<!-- Desktop Menu -->
 				<div class="hidden md:flex space-x-8 items-center">
-					<div class="relative group">
-					<a href="#" class="text-gray-700 hover:text-purple-600">Home</a>
-					</div>
-					<div class="relative group">
-					<a href="#" class="text-gray-700 hover:text-purple-600">About</a>
-					</div>
-					<div class="relative group">
-					<a href="#" class="text-gray-700 hover:text-purple-600">Services</a>
-					<!-- Submenu -->
-					<div class="absolute left-0 top-full mt-1 hidden group-hover:block bg-white shadow-lg rounded-md">
-						<a href="#" class="block px-4 py-2 text-gray-700 hover:bg-purple-100">Service 1</a>
-						<a href="#" class="block px-4 py-2 text-gray-700 hover:bg-purple-100">Service 2</a>
-					</div>
+					<div v-for="(nav, index) in nav_items" :key="index" class="relative group">
+						<a href="#" class="text-gray-700 hover:text-purple-600">{{ nav.title }}</a>
+						<!-- Submenu -->
+						<div v-if="nav.child.length" class="absolute left-0 top-full mt-1 hidden group-hover:block bg-white shadow-lg rounded-md">
+							<a v-for="(child_nav, index) in nav.child" :key="index" href="#" class="block px-4 py-2 text-gray-700 hover:bg-purple-100">{{ child_nav.title }}</a>
+						</div>
 					</div>
 				</div>
 
 				<!-- User Icon or Login Button -->
 				<div class="flex items-center space-x-4">
 					<div class="hidden md:block">
-					<!-- Assuming user is logged in -->
-					<a href="#" class="text-gray-700 hover:text-purple-600">
-						
-						<font-awesome-icon :icon="['fas', 'user']" class="text-2xl" />
-					</a>
+						<!-- Assuming user is logged in -->
+						<a href="#" class="text-gray-700 hover:text-purple-600">
+							<font-awesome-icon :icon="['fas', 'user']" class="text-2xl" />
+						</a>
 					</div>
 
 					<!-- Mobile Menu Button -->
 					<div class="md:hidden">
-					<button id="mobile-menu-toggle" class="text-gray-700 hover:text-purple-600 focus:outline-none" @click="toggleMenu()">
-						<font-awesome-icon :icon="['fas', 'bars']" class="text-2xl" />
-					</button>
+						<button id="mobile-menu-toggle" class="text-gray-700 hover:text-purple-600 focus:outline-none" @click="toggleMenu()">
+							<font-awesome-icon :icon="['fas', 'bars']" class="text-2xl" />
+						</button>
 					</div>
 				</div>
 				</div>
@@ -48,12 +40,11 @@
 
 			<!-- Mobile Menu -->
 			<div id="mobile-menu" class="md:hidden bg-white shadow-lg" :class="{ hidden: !isMenuOpen }">
-				<a href="#" class="block px-4 py-2 text-gray-700 hover:bg-purple-100">Home</a>
-				<a href="#" class="block px-4 py-2 text-gray-700 hover:bg-purple-100">About</a>
-				<a href="#" class="block px-4 py-2 text-gray-700 hover:bg-purple-100">Services</a>
-				<div class="pl-4">
-				<a href="#" class="block px-4 py-2 text-gray-700 hover:bg-purple-100">Service 1</a>
-				<a href="#" class="block px-4 py-2 text-gray-700 hover:bg-purple-100">Service 2</a>
+				<div v-for="(nav, index) in nav_items" :key="index">
+					<a href="#" class="block px-4 py-2 text-gray-700 hover:bg-purple-100">{{ nav.title }}</a>
+					<div v-if="nav.child.length" class="pl-4">
+						<a v-for="(child_nav, index) in nav.child" :key="index" href="#" class="block px-4 py-2 text-gray-700 hover:bg-purple-100">{{ child_nav.title }}</a>
+					</div>
 				</div>
 			</div>
 		</nav>
@@ -70,15 +61,37 @@
 			child: [],
 		},
 		{
-			title: 'Tiếng Nhật',
-			child: [],
+			title: 'Tiếng nhật',
+			child: [
+				{
+					title: 'Từ vựng',
+					child: [],
+				},
+				{
+					title: 'Ngữ pháp',
+					child: [],
+				},
+			],
 		},
 		{
-			title: 'Lập Trình',
-			child: [],
+			title: 'Lập trình',
+			child: [
+				{
+					title: 'Frontend',
+					child: [],
+				},
+				{
+					title: 'Backend',
+					child: [],
+				},
+				{
+					title: 'Database',
+					child: [],
+				},
+			],
 		},
 		{
-			title: 'Liên Hệ',
+			title: 'Liên hệ',
 			child: [],
 		},
 	];
