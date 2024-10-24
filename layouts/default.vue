@@ -1,7 +1,7 @@
 <template>
-    <div class="bg-gray-50 pt-20">
+    <div class="bg-gray-100 pt-20 font-nunito">
         <AppHeader />
-        <div class="container flex gap-8 flex-col md:flex-row mx-auto max-w-screen-xl">
+        <div class="container flex gap-8 flex-col md:flex-row mx-auto max-w-screen-xl pb-20">
             <div class="w-full xl:w-3/4">
                 <slot />
             </div>

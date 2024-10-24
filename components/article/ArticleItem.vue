@@ -1,6 +1,6 @@
 <template>
-    <div class="group cursor-pointer bg-white">
-        <div class="overflow-hidden rounded-md bg-gray-100 transition-all hover:scale-105 dark:bg-gray-800">
+    <div class="group cursor-pointer bg-white rounded-md overflow-hidden">
+        <div class="overflow-hidden bg-gray-100 transition-all hover:scale-105 dark:bg-gray-800">
             <a class="relative block aspect-square" href="/post/14-architectural-design-ideas-for-spacious-interior">
                 <img class="aspect-square object-cover" :src="article.image" alt="">
             </a>
@@ -20,7 +20,7 @@
                 </a>
             </h2>
             <div class="">
-                <p class="mt-2 line-clamp-3 text-sm text-gray-500 dark:text-gray-400">
+                <p class="mt-2 line-clamp-3 text-gray-500 dark:text-gray-400">
                     <a href="/post/14-architectural-design-ideas-for-spacious-interior">{{ article.description }}</a>
                 </p>
             </div>
