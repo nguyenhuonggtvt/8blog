@@ -1,10 +1,10 @@
 // stores/category.ts
 import { defineStore } from 'pinia'
-import { ref, reactive } from 'vue'
+import { ref } from 'vue'
 
 export const useCategoryStore = defineStore('categories', () => {
     // State
-    const categories = ref([])
+    const categories = ref({})
 
     // Actions
     const fetchCategories = async () => {

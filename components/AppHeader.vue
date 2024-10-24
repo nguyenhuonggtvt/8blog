@@ -50,8 +50,8 @@
 		</nav>
 		<!-- <div v-if="categories.length">
 			<div v-for="(category, index) in categories" :key="index">{{ category.name }}</div>
-		</div>
-		 -->
+		</div> -->
+		
 	</header>
 </template>
 
