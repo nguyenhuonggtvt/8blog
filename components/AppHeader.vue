@@ -48,13 +48,22 @@
 				</div>
 			</div>
 		</nav>
+		<!-- <div v-if="categories.length">
+			<div v-for="(category, index) in categories" :key="index">{{ category.name }}</div>
+		</div>
+		 -->
 	</header>
 </template>
 
 <script lang="ts" setup>
 	import { ref } from 'vue';
+	import { useCategoryStore } from '~/stores/category'
+
+	const categoryStore = useCategoryStore();
+	const categories = categoryStore.categories
 	
 	const isMenuOpen = ref(false);
+	
 	const nav_items = [
 		{
 			title: 'Home',
