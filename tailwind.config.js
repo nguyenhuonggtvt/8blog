@@ -10,8 +10,7 @@ export default {
     theme: {
         extend: {
             fontFamily: {
-                sans_jp: ['Noto Sans JP', 'sans-serif'],
-                nunito: ['Nunito', 'sans-serif'],
+                sans_nunito: ['Nunito', 'Noto Sans JP','sans-serif'],
             },
         },
     },

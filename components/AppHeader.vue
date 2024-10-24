@@ -13,7 +13,7 @@
 					<div v-for="(nav, index) in nav_items" :key="index" class="relative group">
 						<a href="#" class="text-gray-700 hover:text-purple-600">{{ nav.title }}</a>
 						<!-- Submenu -->
-						<div v-if="nav.child.length" class="absolute left-0 top-full mt-1 hidden group-hover:block bg-white shadow-lg rounded-md">
+						<div v-if="nav.child.length" class="w-44 absolute left-0 top-full hidden group-hover:block bg-white shadow-lg rounded-md">
 							<a v-for="(child_nav, index) in nav.child" :key="index" href="#" class="block px-4 py-2 text-gray-700 hover:bg-purple-100">{{ child_nav.title }}</a>
 						</div>
 					</div>

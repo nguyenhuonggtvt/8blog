@@ -1,5 +1,5 @@
 <template>
-    <div class="bg-gray-100 pt-20 font-nunito">
+    <div class="bg-gray-100 pt-20 font-sans_nunito">
         <AppHeader />
         <div class="container flex gap-8 flex-col md:flex-row mx-auto max-w-screen-xl pb-20">
             <div class="w-full xl:w-3/4">

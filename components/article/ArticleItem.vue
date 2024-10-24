@@ -6,12 +6,10 @@
             </a>
         </div>
         <div class="p-4">
-            <div class="flex gap-3">
-                <a href="/category/design">
-                    <span class="inline-block text-xs font-medium tracking-wider uppercase mt-5 text-blue-600">{{ article.categories[0] }}</span>
-                </a>
-                <a href="/category/lifestyle">
-                    <span class="inline-block text-xs font-medium tracking-wider uppercase mt-5 text-purple-600">{{ article.categories[1] }}</span>
+            <div v-if="article.categories.length" class="flex gap-3">
+                <a v-for="(category, index) in article.categories" :key="index" href="/category/design">
+                    <span class="inline-block text-xs font-medium tracking-wider uppercase mt-5"
+                        :class="{ 'text-blue-600': index == 0, 'text-purple-600': index == 1, 'text-red-400': index > 1 }">{{ category }}</span>
                 </a>
             </div>
             <h2 class="text-lg font-semibold leading-snug tracking-tight mt-2 dark:text-white">
