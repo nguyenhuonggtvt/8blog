@@ -8,16 +8,18 @@ export const useCategoryStore = defineStore('categories', () => {
 
     // Actions
     const fetchCategories = async () => {
-        try {
-            const { data } = useAsyncData('categories', async () => {
-                return await $fetch('/api/categories')
-            });
-
-            if (data.value) {
-                categories.value = data.value
+        if (!categories.value.length && import.meta.server) {
+            try {
+                const { data } = await useAsyncData('categories', async () => {
+                    return $fetch('/api/categories')
+                });
+    
+                if (data.value) {
+                    categories.value = data.value
+                }
+            } catch (error) {
+                console.error('Error fetching category:', error)
             }
-        } catch (error) {
-            console.error('Error fetching category:', error)
         }
     }
 

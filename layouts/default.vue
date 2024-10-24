@@ -17,5 +17,7 @@
     import { useCategoryStore } from '~/stores/category'
 
     const categoryStore = useCategoryStore()
-    await categoryStore.fetchCategories()
+    // if (!categoryStore.categories.length) {
+        await categoryStore.fetchCategories()
+    // }
 </script>
