@@ -16,8 +16,10 @@
 <script setup>
     import { useCategoryStore } from '~/stores/category'
 
+    // Dùng useAsyncData để fetch categories từ store
     const categoryStore = useCategoryStore()
-    if (!categoryStore.categories.length) {
+    await useAsyncData('categories', async () => {
         await categoryStore.fetchCategories()
-    }
+        return categoryStore.categories
+    });
 </script>
